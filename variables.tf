@@ -3,6 +3,12 @@ variable "name" {
   type        = string
 }
 
+variable "namespace" {
+  description = "Namespace where the chart will be deployed"
+  type        = string
+  default     = "default"
+}
+
 variable "repository" {
   description = "Helm Repository"
   type        = string
@@ -64,4 +70,10 @@ variable "set_sensitive" {
     value = string
   }))
   default = null
+}
+
+variable "create_namespace" {
+  description = "Flag if to create the specified namespace"
+  type        = bool
+  default     = false
 }
