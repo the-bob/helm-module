@@ -14,7 +14,7 @@ variable "repository" {
   type        = string
 }
 
-variable "values_file" {
+variable "values_files" {
   description = "Helm Values File"
   type        = set(string)
   default     = []
