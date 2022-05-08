@@ -12,7 +12,7 @@ module "helm" {
   namespace  = var.namespace
   repository = var.repository
 
-  values = var.values_file != null && var.values_file != "" ? [templatefile(var.values_file, var.values)] : []
+  values = var.values_file != null && var.values_file != "" ? [templatefile(local.values_file, var.values)] : []
   app = {
     name          = var.name
     version       = var.chart_version
