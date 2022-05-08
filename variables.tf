@@ -22,8 +22,8 @@ variable "values_file" {
 
 variable "values" {
   description = "Override Values that will be added in the values file if the values_file is specified"
-  type        = map(string)
-  default     = {}
+  type        = list(string)
+  default     = []
 }
 
 variable "chart_version" {
