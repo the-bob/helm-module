@@ -17,7 +17,7 @@ variable "repository" {
 variable "values_file" {
   description = "Helm Values File"
   type        = set(string)
-  default     = null
+  default     = []
 }
 
 variable "values" {
