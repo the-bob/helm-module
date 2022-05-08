@@ -77,3 +77,9 @@ variable "create_namespace" {
   type        = bool
   default     = false
 }
+
+variable "secret_files" {
+  description = "Secrets file for deployment"
+  type        = list(string)
+  default     = []
+}

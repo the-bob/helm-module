@@ -6,7 +6,7 @@ module "helm" {
   namespace  = var.namespace
   repository = var.repository
 
-  values = var.values_file != null ? local.values_file : []
+  values = var.values_file != null ? concat(local.values_file, var.secret_files) : []
   app = {
     name             = var.name
     version          = var.chart_version
