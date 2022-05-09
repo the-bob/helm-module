@@ -2,12 +2,12 @@ name: Terraform Helm Module
 
 on:
   push:
-    branches: [ develop, feature/* ]    
+    branches: [ main, feature/* ]    
   pull_request:
     branches: [ feature/* ]
 
   workflow_dispatch: 
 
 jobs:
-  create-api-image:
+  terraform:
     uses: the-bob/github-workflows/.github/workflows/terraform.yml@main
