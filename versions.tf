@@ -1,10 +1,4 @@
 terraform {
-  required_version = ">= 1.1.8"
-  #   backend "s3" {
-  #     bucket = "bucket"
-  #     key    = "kubernetes/terraform.tfstate"
-  #     region = "eu-north-1"
-  #   }
   required_providers {
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -25,5 +19,4 @@ provider "helm" {
   kubernetes {
     config_path = "~/.kube/config"
   }
-
 }
