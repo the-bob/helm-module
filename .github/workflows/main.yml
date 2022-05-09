@@ -12,5 +12,6 @@ jobs:
   terraform:
     uses: the-bob/github-workflows/.github/workflows/terraform.yml@main
     with:
+      name: Terraform Helm
     secrets:
       github_token: ${{ secrets.GITHUB_TOKEN }}
