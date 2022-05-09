@@ -2,14 +2,13 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >= 2.4.1 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >= 2.11.0 |
+No requirements.
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_null"></a> [null](#provider\_null) | 3.1.1 |
 
 ## Modules
 
@@ -19,7 +18,9 @@ No providers.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [null_resource.wait_post_provision](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 
 ## Inputs
 
@@ -39,6 +40,7 @@ No resources.
 | <a name="input_values"></a> [values](#input\_values) | Override Values that will be added in the values file if the values\_file is specified | `map(string)` | `{}` | no |
 | <a name="input_values_files"></a> [values\_files](#input\_values\_files) | Helm Values File | `set(string)` | `[]` | no |
 | <a name="input_wait"></a> [wait](#input\_wait) | Flag if to wait until the deployment finishes | `bool` | `true` | no |
+| <a name="input_wait_in_seconds"></a> [wait\_in\_seconds](#input\_wait\_in\_seconds) | Wait In Seconds (This normally for waiting for other resources to be provisioned) | `number` | `0` | no |
 
 ## Outputs
 
