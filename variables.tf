@@ -82,4 +82,5 @@ variable "secret_files" {
   description = "Secrets file for deployment"
   type        = list(string)
   default     = []
+  sensitive   = true
 }
