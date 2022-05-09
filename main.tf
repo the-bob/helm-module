@@ -10,7 +10,7 @@ module "helm" {
   repository = var.repository
 
   values = var.values_files != null ? concat(local.values_file, var.secret_files) : []
-  
+
   app = {
     name             = var.name
     version          = var.chart_version
