@@ -84,3 +84,9 @@ variable "secret_files" {
   default     = []
   sensitive   = true
 }
+
+variable "wait_in_seconds" {
+  description = "Wait In Seconds (This normally for waiting for other resources to be provisioned)"
+  type        = number
+  default     = 0
+}

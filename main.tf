@@ -26,3 +26,14 @@ module "helm" {
   set           = var.set
   set_sensitive = var.set_sensitive
 }
+
+resource "null_resource" "wait_post_provision" {
+  depends_on = [
+    module.helm
+  ]
+  count = var.wait_in_seconds > 0 ? 1 : 0
+  provisioner "local-exec" {
+    interpreter = ["/bin/bash", "-c"]
+    command     = "sleep ${var.wait_in_seconds}"
+  }
+}
